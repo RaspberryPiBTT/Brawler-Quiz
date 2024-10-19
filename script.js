@@ -14,25 +14,27 @@ var picture_list = ["","","",""];
 var brawler = guessable_brawlers[random_number];
 var attack = attack_list[random_number];
 var hair_color = hair_color_list[random_number];
-var main_attack = main_attack_list[random_number];
 var skin_color = skin_color_list[random_number];
-var character_class = character_class_list[random_number];
 var rarity = rarity_list[random_number];
 var trio = trio_list[random_number];
 var picture = picture_list[random_number];
 
+function fill_in_info() {
+  document.getElementById("att_id").innerHTML = "This brawler's attack is: " + attack;
+  document.getElementById("hair_id").innerHTML = "Their hair color is: " + hair_color;
+  document.getElementById("skin_id").innerHTML = "Their skin color is: " + skin_color;
+  document.getElementById("rarity_id").innerHTML = "Character Rarity: " + rarity;
+  document.getElementById("trio_id").innerHTML = "They belong to the Trio of: " + trio;
+}
+
 //Check if the brawler they guessed is correct
 function checkGuess() {
-  document.getElementById("fname").innerHTML = "FILLER TEXT HERE";
+  console.log("TESTING HERE");
   
   var guess = document.getElementById("character-guessed").value;
   if (guess == brawler) {
-    document.getElementById("myresults").innerHTML =
-      "CORRECT";
-    console.log("CORRECT");
+    document.getElementById("myresults").innerHTML = "✅CORRECT";
   } else {
-    document.getElementById("myresults").innerHTML =
-      "INCORRECT";
-    console.log("INCORRECT");
+    document.getElementById("myresults").innerHTML = "❌INCORRECT";
   }
 }
