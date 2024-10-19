@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
 
-  
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title> Guess the Brawler </title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- Activate the fill-in-info function -->
+  <script src="script.js"></script>
 </head>
 
 
   <h1> Guess the Brawler </h1>
 
   
-<body>
+<body onload="fill_in_info()">
 
   <p></p>
   
@@ -31,10 +33,6 @@
   
     <p></p>
 
-    <label id="class_id">Their character class is: TODO </label>
-
-    <p></p>
-
     <label id="rarity_id">Character Rarity: TODO </label>
 
     <p></p>
@@ -43,8 +41,8 @@
 
     <p></p>
     
-    <label for="colors">Choose Character to Guess: </label>
-    <select id="colors">
+    <label for="character-guessed">Choose Character to Guess: </label>
+    <select id="character-guessed">
       <option>Buzz</option>
       <option>EMZ</option>
       <option>Edgar</option>
@@ -52,23 +50,14 @@
     </select>
 
     <p></p>
-    <button class="submit-guess" 
-      onclick="checkGuess()">
-      Submit Guess</button>
-    <span id="myresults">My results will appear here</span>
+    <button class="submit-guess" onclick="checkGuess()">Submit Guess</button>
+    <p></p>
+    <span id="myresults"></span>
   </form>
 
 </body>
   
 </html>
 
-<!-- HOMEWORK:
-1. Try to login to your old account to access replit and login to it to see the slides too. Otherwise, make an account to temporarily work on your project.
-2. On the scipt.js file, fill the list of items with each brawler's information.
-3. Get the links of or download 4 pictures or more of the brawlers you will use for the test.
-4. CHALLENGE: Make the button show the picture of a brawler at the bottom when you click it.
 
-Link to presentation slides: https://docs.google.com/presentation/d/1TpDjvw1gpWEY92NUdgZQSJjstMIKk4lDjuSWkfLeJN8/edit#slide=id.g72b8c6b687_0_114
-NOTE: If Replit does no work to WebView, make real online website via Github.
--->
 
